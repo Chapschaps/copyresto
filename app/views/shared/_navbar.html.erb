@@ -1,0 +1,55 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <span>Pizzeria de Paris</span>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Menus à emporter", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <i class="fas fa-bars" id="navbarDropdown", aria-haspopup="true", aria-expanded="false", data-toggle="dropdown"></i>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <nav>
+            <button class="dropdown-item" onclick="myScrollTo('propos');">À propos</button>
+            <button class="dropdown-item" onclick="myScrollTo('carte');">Carte</button>
+            <button class="dropdown-item" onclick="myScrollTo('gallerie');">Gallerie</button>
+            <button class="dropdown-item" onclick="myScrollTo('contact');">Contact</button>
+          </nav>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const myLastScrollTo = (id, delta) => {
+    var e = document.getElementById(id);
+    var box = e.getBoundingClientRect();
+    window.scrollBy(0, box.top - delta);
+  }
+
+  const myScrollTo = (id) => {
+    var e = document.getElementById(id);
+    var menu = document.querySelector("nav");
+    var box = e.getBoundingClientRect();
+    var k, inc, z, s;
+    var delta = menu.getBoundingClientRect().bottom;
+    z = box.top - delta;
+    inc = (z >= 0) ? 1 : -1;
+    for (k = 0; k < 49; k++) {
+      s = "window.scrollBy(0," + Math.floor(z / 50) + ")";
+      setTimeout(s, 10 * k);
+    }
+    s = "myLastScrollTo('" + id + "'," + delta + ")";
+    setTimeout(s, 500);
+  }
+
+</script>

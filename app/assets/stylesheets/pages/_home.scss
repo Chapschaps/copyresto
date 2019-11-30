@@ -1,1 +1,40 @@
-// Specific CSS for your home-page
+.descrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5em;
+  weight: 100vw;
+}
+
+.descrip-text {
+  width: 50vw;
+  margin-right: 5em;
+  p {
+    line-height: 1.5;
+  }
+}
+
+.descrip img {
+  height: 500px;
+}
+
+.descrip2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5em;
+  weight: 100vw;
+}
+
+.descrip-text2 {
+  width: 50vw;
+  margin-left: 5em;
+  p {
+    line-height: 1.5;
+  }
+}
+
+.descrip2 img {
+  height: 300px;
+}
+

@@ -3,6 +3,10 @@
   background: white;
 }
 
+.navbar-lewagon span {
+  margin-left: 10vw;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -10,3 +14,14 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-item i {
+  font-size: 2em;
+  margin-left: 2vw;
+}
+
+.dropdown-item button {
+  padding: 1em;
+  border: 2px solid black;
+}
+
