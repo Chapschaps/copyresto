@@ -38,3 +38,24 @@
   height: 300px;
 }
 
+.plats-text {
+  position: absolute;
+  bottom: 3em;
+  left: 40vw;
+}
+.plats-photo {
+  position: relative;
+  /* The image used */
+  background-image: url("https://www.pizzeriadauteuil-restaurant.com/wp-content/uploads/2015/06/DSC_0681-1.jpg");
+
+  /* Set a specific height */
+  min-height: 300px;
+  height: 70vh;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
