@@ -1,56 +1,69 @@
+body {
+  overflow-x: hidden;
+}
 .descrip {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width:100vw;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
   margin-top: 5em;
-  weight: 100vw;
+  width: 100vw;
+  align-items: center;
 }
 
 .descrip-text {
-  width: 50vw;
-  margin-right: 5em;
   p {
     line-height: 1.5;
   }
 }
 
 .descrip img {
-  height: 500px;
+  height: 60vh;
+  border-radius: 5px;
+  max-width: 50vw;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .descrip2 {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   margin-top: 5em;
-  weight: 100vw;
+  width: 100vw;
+  margin-bottom: 5em;
 }
 
 .descrip-text2 {
-  width: 50vw;
-  margin-left: 5em;
+  overflow: hidden;
+  overflow-wrap: break-word;
   p {
     line-height: 1.5;
   }
 }
 
 .descrip2 img {
-  height: 300px;
+  height: 40vh;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .plats-text {
   position: absolute;
   bottom: 3em;
-  left: 40vw;
+  left: 45vw;
 }
 .plats-photo {
   position: relative;
   /* The image used */
-  background-image: url("https://www.pizzeriadauteuil-restaurant.com/wp-content/uploads/2015/06/DSC_0681-1.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.pizzeriadauteuil-restaurant.com/wp-content/uploads/2015/06/DSC_0681-1.jpg);
+  // background-image: url("https://www.pizzeriadauteuil-restaurant.com/wp-content/uploads/2015/06/DSC_0681-1.jpg");
 
   /* Set a specific height */
   min-height: 300px;
-  height: 70vh;
+  height: 40vh;
 
 
   /* Create the parallax scrolling effect */
@@ -59,3 +72,81 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+h1, h2, p {
+  color: #444444;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .descrip, .descrip2 {
+    grid-template-columns: 3fr;
+    width: 100vw;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .descrip, .descrip2 {
+    grid-template-columns: 3fr;
+    width: 100vw;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .descrip {
+      grid-template-columns: 2fr 1fr;
+      width: 100vw;
+      img {
+        margin-right: 15em;
+      }
+    }
+    .descrip2 {
+      grid-template-columns: 1fr 2fr;
+      width: 100vw;
+    }
+    .descrip-text, .descrip-text2 {
+      width: 50vw;
+    }
+  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .descrip {
+    grid-template-columns: 2fr 1fr;
+    width: 100vw;
+    img {
+      margin-right: 15em;
+    }
+  }
+  .descrip2 {
+    grid-template-columns: 1fr 2fr;
+    width: 100vw;
+  }
+  .descrip-text, .descrip-text2 {
+    width: 50vw;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .descrip {
+    grid-template-columns: 2fr 1fr;
+    width: 100vw;
+    img {
+      margin-right: 15em;
+    }
+  }
+  .descrip2 {
+    grid-template-columns: 1fr 2fr;
+    width: 100vw;
+  }
+  .descrip-text, .descrip-text2 {
+    width: 50vw;
+  }
+}
+
+
+
+

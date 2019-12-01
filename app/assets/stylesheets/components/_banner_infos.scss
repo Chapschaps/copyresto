@@ -1,0 +1,39 @@
+.banner-infos {
+  height: 220px;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0px;
+  background-color: #262625;
+  p {
+    color: #787878;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.banner-infos ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
+
+.banner-infos ul li i {
+  color: #787878;
+  font-size: 0.9em;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+#trip-icone {
+  color: white;
+  font-size: 2.0em;
+}
+
+#trip-icone:hover {
+  color: #787878;
+}
